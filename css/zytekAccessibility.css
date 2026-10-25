@@ -1,0 +1,819 @@
+/**
+ * @file plugins/generic/zytekAccessibility/css/zytekAccessibility.css
+ *
+ * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
+ *
+ * @brief Accessibility panel and reader preferences. Theme independent:
+ *  preferences are classes on <html> set by js/zytekAccessibility.js.
+ *  Fonts: Atkinson Hyperlegible, SIL Open Font License (fonts/OFL-*.txt).
+ */
+
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/atkinson-hyperlegible-latin-ext-400-normal.woff2") format("woff2");
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/atkinson-hyperlegible-latin-ext-700-normal.woff2") format("woff2");
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ==========================================================================
+   Panel
+   ========================================================================== */
+
+.zytek-a11y {
+	--zytek-a11y-accent: #0B4F9C;
+	/* Darker accent for text on light tints (keeps AA with any allowed accent) */
+	--zytek-a11y-accent-ink: #083a73;
+	--zytek-a11y-accent-ink: color-mix(in srgb, var(--zytek-a11y-accent) 70%, #000);
+	--zytek-a11y-tint: #e7edf6;
+	--zytek-a11y-tint: color-mix(in srgb, var(--zytek-a11y-accent) 11%, #fff);
+	--zytek-a11y-text: #1c2233;
+	--zytek-a11y-muted: #555d70;
+	--zytek-a11y-line: #e0e3ec;
+	--zytek-a11y-surface: #f5f6fa;
+	--zytek-a11y-step: #d7dbe8;
+	position: fixed;
+	z-index: 2147483000;
+	bottom: 1em;
+	right: 1em;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+	/* The panel follows the reader's text size up to 125%, so its controls
+	   stay usable on a phone at 200%; every size below is relative to this. */
+	font-size: clamp(16px, 1rem, 20px);
+	line-height: 1.4;
+	color: var(--zytek-a11y-text);
+}
+
+.zytek-a11y--bottomLeft {
+	right: auto;
+	left: 1em;
+}
+
+.zytek-a11y[hidden],
+.zytek-a11y [hidden] {
+	display: none !important;
+}
+
+.zytek-a11y *,
+.zytek-a11y *::before,
+.zytek-a11y *::after {
+	box-sizing: border-box;
+}
+
+.zytek-a11y__sr {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* Themes style headings, lists and buttons globally; the panel keeps its own */
+#zytekA11y h2,
+#zytekA11y h3,
+#zytekA11y h4 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: inherit;
+	letter-spacing: normal;
+	text-transform: none;
+	color: inherit;
+	line-height: 1.25;
+}
+#zytekA11y ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#zytekA11y button {
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	letter-spacing: normal;
+	text-transform: none;
+	text-shadow: none;
+	cursor: pointer;
+}
+#zytekA11y a {
+	color: inherit;
+}
+
+.zytek-a11y :focus-visible {
+	outline: 3px solid #ffbf00;
+	outline-offset: 2px;
+	box-shadow: 0 0 0 6px #000;
+}
+
+.zytek-a11y__svg {
+	flex: none;
+	display: block;
+}
+
+/* Floating button ----------------------------------------------------------- */
+
+#zytekA11y .zytek-a11y__toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3.5em;
+	height: 3.5em;
+	padding: 0;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	background: var(--zytek-a11y-accent);
+	color: #fff;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+#zytekA11y .zytek-a11y__toggle:hover {
+	filter: brightness(1.12);
+}
+.zytek-a11y__toggle .zytek-a11y__svg {
+	width: 1.9em;
+	height: 1.9em;
+}
+html.zytek-a11y-buttonHidden .zytek-a11y__toggle {
+	display: none !important;
+}
+
+/* Panel frame ---------------------------------------------------------------- */
+
+.zytek-a11y__panel {
+	position: absolute;
+	bottom: 4.25em;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	width: min(25.5em, calc(100vw - 2em));
+	max-height: calc(100vh - 6em);
+	max-height: calc(100dvh - 6em);
+	overflow: hidden;
+	border-radius: 1em;
+	background: var(--zytek-a11y-surface);
+	box-shadow: 0 16px 48px rgba(16, 24, 40, 0.28), 0 2px 6px rgba(16, 24, 40, 0.12);
+}
+.zytek-a11y--bottomLeft .zytek-a11y__panel {
+	right: auto;
+	left: 0;
+}
+html.zytek-a11y-buttonHidden .zytek-a11y__panel {
+	bottom: 0;
+}
+
+/* Header: title, language, hide and close */
+.zytek-a11y__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5em;
+	padding: 0.7em 0.6em 0.7em 1.1em;
+	background: var(--zytek-a11y-accent);
+	color: #fff;
+}
+#zytekA11y .zytek-a11y__title {
+	font-size: 1.125em;
+	font-weight: 700;
+	color: #fff;
+}
+.zytek-a11y__head-actions {
+	display: flex;
+	align-items: center;
+	gap: 0.15em;
+}
+#zytekA11y .zytek-a11y__head-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.3em;
+	min-width: 2.75em;
+	height: 2.75em;
+	padding: 0 0.45em;
+	border: 0;
+	border-radius: 0.6em;
+	background: transparent;
+	color: #fff;
+	font-weight: 600;
+}
+#zytekA11y .zytek-a11y__head-button:hover,
+#zytekA11y .zytek-a11y__head-button[aria-expanded="true"] {
+	background: rgba(255, 255, 255, 0.16);
+}
+.zytek-a11y__head :focus-visible {
+	outline-color: #fff;
+}
+.zytek-a11y__lang {
+	position: relative;
+}
+#zytekA11y .zytek-a11y__lang-menu {
+	position: absolute;
+	z-index: 2;
+	top: calc(100% + 0.35em);
+	right: 0;
+	min-width: 11em;
+	padding: 0.35em;
+	border-radius: 0.75em;
+	background: #fff;
+	color: var(--zytek-a11y-text);
+	box-shadow: 0 10px 30px rgba(16, 24, 40, 0.25);
+}
+#zytekA11y .zytek-a11y__lang-menu a {
+	display: block;
+	padding: 0.6em 0.8em;
+	border-radius: 0.5em;
+	text-decoration: none;
+	font-weight: 600;
+}
+#zytekA11y .zytek-a11y__lang-menu a:hover {
+	background: var(--zytek-a11y-tint);
+}
+#zytekA11y .zytek-a11y__lang-menu a[aria-current="true"] {
+	color: var(--zytek-a11y-accent-ink);
+	text-decoration: underline;
+	text-underline-offset: 0.2em;
+}
+
+/* Body: groups of tiles */
+.zytek-a11y__body {
+	flex: 1 1 auto;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	padding: 0 1em 1.1em;
+}
+#zytekA11y .zytek-a11y__hint {
+	margin: 0.8em 0 0;
+	font-size: 0.8125em;
+	color: var(--zytek-a11y-muted);
+}
+#zytekA11y .zytek-a11y__group-title {
+	margin: 1.1em 0 0.6em;
+	font-size: 0.9375em;
+	font-weight: 600;
+	color: var(--zytek-a11y-muted);
+}
+.zytek-a11y__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.6em;
+}
+
+/* A tile: icon, name, current step and step marks */
+#zytekA11y .zytek-a11y__tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4em;
+	min-height: 6.4em;
+	padding: 0.85em 0.35em 0.7em;
+	border: 1px solid var(--zytek-a11y-line);
+	border-radius: 0.8em;
+	background: #fff;
+	color: var(--zytek-a11y-text);
+	box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+	text-align: center;
+	transition: background-color 0.15s, border-color 0.15s;
+}
+#zytekA11y .zytek-a11y__tile:hover {
+	border-color: var(--zytek-a11y-accent);
+}
+#zytekA11y .zytek-a11y__tile[aria-pressed="true"],
+#zytekA11y .zytek-a11y__tile[aria-expanded="true"] {
+	border-color: var(--zytek-a11y-accent);
+	background: var(--zytek-a11y-accent);
+	color: #fff;
+}
+.zytek-a11y__tile .zytek-a11y__svg {
+	width: 1.8em;
+	height: 1.8em;
+}
+.zytek-a11y__tile-label {
+	font-size: 0.8125em;
+	font-weight: 700;
+	line-height: 1.2;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	overflow-wrap: anywhere;
+}
+.zytek-a11y__tile-value {
+	font-size: 0.75em;
+	line-height: 1.2;
+}
+.zytek-a11y__tile-value:empty {
+	display: none;
+}
+.zytek-a11y__steps {
+	display: flex;
+	gap: 0.25em;
+	width: 72%;
+	margin-top: 0.1em;
+}
+.zytek-a11y__step {
+	flex: 1;
+	height: 0.22em;
+	border-radius: 1em;
+	background: var(--zytek-a11y-step);
+}
+[aria-pressed="true"] .zytek-a11y__step {
+	background: rgba(255, 255, 255, 0.4);
+}
+[aria-pressed="true"] .zytek-a11y__step.is-active {
+	background: #fff;
+}
+
+/* Page map, opened from its tile */
+.zytek-a11y__structure {
+	margin-top: 0.9em;
+	padding: 0.6em 0.75em;
+	border: 1px solid var(--zytek-a11y-line);
+	border-radius: 0.8em;
+	background: #fff;
+}
+#zytekA11y .zytek-a11y__subtitle {
+	margin: 0.5em 0 0.3em;
+	font-size: 0.8125em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--zytek-a11y-muted);
+}
+#zytekA11y .zytek-a11y__jump {
+	display: block;
+	width: 100%;
+	min-height: 2.5em;
+	padding: 0.4em 0.5em;
+	border: 0;
+	border-radius: 0.5em;
+	background: transparent;
+	font-size: 0.875em;
+	text-align: left;
+}
+#zytekA11y .zytek-a11y__jump:hover {
+	background: var(--zytek-a11y-tint);
+}
+.zytek-a11y__jump--h2 { padding-left: 1.25em !important; }
+.zytek-a11y__jump--h3 { padding-left: 2em !important; }
+.zytek-a11y__jump--h4 { padding-left: 2.75em !important; }
+
+/* Reset */
+#zytekA11y .zytek-a11y__reset {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	width: 100%;
+	min-height: 3em;
+	margin-top: 1.25em;
+	border: 1px solid transparent;
+	border-radius: 0.8em;
+	background: var(--zytek-a11y-tint);
+	color: var(--zytek-a11y-accent-ink);
+	font-weight: 700;
+}
+#zytekA11y .zytek-a11y__reset:hover {
+	border-color: var(--zytek-a11y-accent);
+}
+
+/* Footer: statement, report, brand */
+.zytek-a11y__foot {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75em;
+	padding: 0.7em 1.1em;
+	border-top: 1px solid var(--zytek-a11y-line);
+	background: #fff;
+}
+.zytek-a11y__foot-links {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+#zytekA11y .zytek-a11y__foot-links a {
+	display: inline-block;
+	padding: 0.15em 0;
+	font-size: 0.8125em;
+	font-weight: 600;
+	text-decoration: none;
+}
+#zytekA11y .zytek-a11y__foot-links a:hover {
+	text-decoration: underline;
+}
+.zytek-a11y__brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3em;
+	font-size: 1.25em;
+	font-weight: 800;
+	letter-spacing: -0.01em;
+	color: var(--zytek-a11y-text);
+}
+.zytek-a11y__brand .zytek-a11y__svg {
+	width: 1.3em;
+	height: 1.3em;
+	color: var(--zytek-a11y-accent);
+}
+
+/* Read-aloud player, next to the button while the tool is on */
+.zytek-a11y__player {
+	position: absolute;
+	right: 4.25em;
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4em;
+	width: max-content;
+	max-width: min(23em, calc(100vw - 6.5em));
+	padding: 0.5em 0.6em;
+	border: 1px solid var(--zytek-a11y-line);
+	border-radius: 0.8em;
+	background: #fff;
+	box-shadow: 0 6px 20px rgba(16, 24, 40, 0.2);
+}
+.zytek-a11y--bottomLeft .zytek-a11y__player {
+	right: auto;
+	left: 4.25em;
+}
+html.zytek-a11y-buttonHidden .zytek-a11y__player {
+	right: 0;
+	left: auto;
+}
+.zytek-a11y__panel:not([hidden]) ~ .zytek-a11y__player {
+	display: none;
+}
+.zytek-a11y__player-label {
+	font-size: 0.8125em;
+	font-weight: 700;
+}
+#zytekA11y .zytek-a11y__player-button {
+	min-height: 2.75em;
+	padding: 0 0.9em;
+	border: 1px solid var(--zytek-a11y-accent);
+	border-radius: 0.6em;
+	background: #fff;
+	color: var(--zytek-a11y-accent-ink);
+	font-size: 0.875em;
+	font-weight: 700;
+}
+#zytekA11y .zytek-a11y__player-button[aria-pressed="true"] {
+	background: var(--zytek-a11y-accent);
+	color: #fff;
+}
+#zytekA11y .zytek-a11y__player-button:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+.zytek-a11y__player-status {
+	flex-basis: 100%;
+	font-size: 0.75em;
+	color: var(--zytek-a11y-muted);
+}
+.zytek-a11y__player-status:empty {
+	display: none;
+}
+
+/* Tooltip shown by the "Tooltips" tool */
+.zytek-a11y__tooltip {
+	position: fixed;
+	z-index: 2147483001;
+	max-width: min(22em, calc(100vw - 16px));
+	padding: 0.45em 0.75em;
+	border-radius: 0.45em;
+	background: #111;
+	color: #fff;
+	font-size: clamp(15px, 0.95rem, 24px);
+	line-height: 1.4;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Phones: the panel becomes a bottom sheet */
+@media (max-width: 30em) {
+	.zytek-a11y__panel,
+	.zytek-a11y--bottomLeft .zytek-a11y__panel {
+		position: fixed;
+		left: 0.5em;
+		right: 0.5em;
+		bottom: 4.75em;
+		width: auto;
+		max-height: calc(100vh - 5.5em);
+		max-height: calc(100dvh - 5.5em);
+	}
+	html.zytek-a11y-buttonHidden .zytek-a11y__panel {
+		bottom: 0.5em;
+	}
+	.zytek-a11y__grid {
+		gap: 0.5em;
+	}
+}
+
+@media print {
+	.zytek-a11y {
+		display: none !important;
+	}
+}
+
+/* ==========================================================================
+   Reader preferences (classes on <html>)
+   ========================================================================== */
+
+/* Text size: scales the theme's own base size, so rem-based text grows */
+html[data-zytek-a11y-text] {
+	font-size: calc(var(--zytek-a11y-base, 16px) * var(--zytek-a11y-scale, 1)) !important;
+}
+
+/* Larger text must reflow instead of pushing the page sideways: a word that
+   cannot fit on its own line breaks, layout containers may shrink and media
+   never exceeds its box. break-word (not anywhere) keeps words whole whenever
+   they fit, and :where() keeps these at zero specificity for themes. */
+html[data-zytek-a11y-text] body :where(*) {
+	overflow-wrap: break-word;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+html[data-zytek-a11y-text] body :where(div, section, article, aside, nav, header, footer, main, form, ul, ol, dl, fieldset, p, dd, blockquote, figcaption) {
+	min-width: 0;
+}
+/* Menu rows in the header and navigation may wrap onto a second line
+   (only there: wrapping a column flexbox would widen cards instead) */
+html[data-zytek-a11y-text] body :where(header, nav, [role="banner"], [role="navigation"]),
+html[data-zytek-a11y-text] body :where(header, nav, [role="banner"], [role="navigation"]) :where(*) {
+	flex-wrap: wrap;
+}
+/* The row of download buttons (PDF, EPUB, HTML) of articles and issues:
+   PKP's default theme forces "row nowrap", which pushes them off screen */
+html[data-zytek-a11y-text] .galleys_links,
+html[data-zytek-a11y-text] .supplementary_galleys_links {
+	flex-wrap: wrap !important;
+}
+html[data-zytek-a11y-text] .zytek-a11y-longword {
+	min-width: 0 !important;
+	overflow-wrap: anywhere !important;
+}
+/* PKP's default theme keeps a 300px sidebar at any text size while its
+   rem-based padding grows, so at 175% and 200% the sidebar would leave room
+   for less than one word. The columns stack instead, as they do when the
+   browser itself is zoomed to that size. */
+@media (min-width: 992px) {
+	html[data-zytek-a11y-text="3"] .pkp_structure_main,
+	html[data-zytek-a11y-text="4"] .pkp_structure_main,
+	html[data-zytek-a11y-text="3"] .pkp_structure_sidebar,
+	html[data-zytek-a11y-text="4"] .pkp_structure_sidebar {
+		float: none;
+		width: auto;
+	}
+	html[data-zytek-a11y-text="3"] .pkp_structure_main::after,
+	html[data-zytek-a11y-text="4"] .pkp_structure_main::after {
+		display: none;
+	}
+}
+html[data-zytek-a11y-text] body :where(input, select, textarea, table, pre) {
+	max-width: 100%;
+}
+html[data-zytek-a11y-text] body img,
+html[data-zytek-a11y-text] body video,
+html[data-zytek-a11y-text] body canvas,
+html[data-zytek-a11y-text] body iframe {
+	max-width: 100% !important;
+	height: auto;
+}
+
+/* Text spacing, values from WCAG 2.1 SC 1.4.12 */
+html.zytek-a11y-textSpacing body *:not(.fa):not([class*="icon"]) {
+	line-height: 1.5 !important;
+	letter-spacing: 0.12em !important;
+	word-spacing: 0.16em !important;
+}
+html.zytek-a11y-textSpacing body p {
+	margin-bottom: 2em !important;
+}
+
+/* Readable font */
+html.zytek-a11y-readableFont body,
+html.zytek-a11y-readableFont body *:not(.fa):not([class^="fa-"]):not([class*=" fa-"]):not(.zytek-a11y__svg) {
+	font-family: "Atkinson Hyperlegible", Verdana, Tahoma, sans-serif !important;
+}
+
+/* Highlight links (image links, such as logos, are outlined instead) */
+html.zytek-a11y-highlightLinks body > *:not(#zytekA11y) a:has(img, svg) {
+	outline: 3px solid #ffbf00 !important;
+	outline-offset: 2px !important;
+	text-decoration: underline !important;
+}
+html.zytek-a11y-highlightLinks body > *:not(#zytekA11y) a:not(:has(img, svg)) {
+	color: #000 !important;
+	background-color: #ffef8a !important;
+	text-decoration: underline !important;
+	text-decoration-thickness: 2px !important;
+	text-underline-offset: 0.18em !important;
+	box-shadow: 0 0 0 2px #ffef8a !important;
+}
+
+/* Big cursor */
+html.zytek-a11y-bigCursor,
+html.zytek-a11y-bigCursor * {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M6 3 L6 40 L15 31 L21 45 L28 42 L22 28 L35 28 Z' fill='black' stroke='white' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E") 6 3, auto !important;
+}
+html.zytek-a11y-bigCursor a,
+html.zytek-a11y-bigCursor a *,
+html.zytek-a11y-bigCursor button,
+html.zytek-a11y-bigCursor button *,
+html.zytek-a11y-bigCursor label,
+html.zytek-a11y-bigCursor select,
+html.zytek-a11y-bigCursor summary,
+html.zytek-a11y-bigCursor [role="button"] {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M17 21 V7 a3.5 3.5 0 0 1 7 0 V19 l9 1.5 a4 4 0 0 1 3.3 4.5 L34.5 38 a5 5 0 0 1 -5 4 H20 a5 5 0 0 1 -4 -2 L8.5 30 a3.2 3.2 0 0 1 4.6 -4.4 Z' fill='white' stroke='black' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E") 18 4, pointer !important;
+}
+
+/* Reading guide: a band that follows the pointer, the rest dimmed */
+.zytek-a11y__guide {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2147482999;
+	height: 3.5em;
+	border-top: 3px solid #000;
+	border-bottom: 3px solid #000;
+	box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.32);
+	pointer-events: none;
+	will-change: transform;
+}
+
+/* Reading mode: one centred column, no sidebars or decorative media */
+html.zytek-a11y-readingMode .pkp_structure_sidebar,
+html.zytek-a11y-readingMode .zytek_hero_video,
+html.zytek-a11y-readingMode .zytek_hero_categories,
+html.zytek-a11y-readingMode .cmp_spotlights,
+html.zytek-a11y-readingMode .zytek_share {
+	display: none !important;
+}
+html.zytek-a11y-readingMode .pkp_structure_content {
+	display: block !important;
+}
+html.zytek-a11y-readingMode .pkp_structure_main {
+	float: none !important;
+	width: auto !important;
+	max-width: 75ch !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	font-size: 1.125em;
+	line-height: 1.8;
+}
+
+/* Stronger focus indicator */
+html.zytek-a11y-focusHighlight *:focus,
+html.zytek-a11y-focusHighlight *:focus-visible {
+	outline: 4px solid #ffbf00 !important;
+	outline-offset: 3px !important;
+	box-shadow: 0 0 0 8px #000 !important;
+}
+html.zytek-a11y-focusHighlight body * {
+	scroll-margin: 5rem;
+}
+
+/* Stop animations and transitions (videos are paused by the script) */
+html.zytek-a11y-stopAnimations *,
+html.zytek-a11y-stopAnimations *::before,
+html.zytek-a11y-stopAnimations *::after {
+	animation-duration: 0.001ms !important;
+	animation-iteration-count: 1 !important;
+	transition: none !important;
+	scroll-behavior: auto !important;
+}
+
+/* Contrast: dark (white text on black, yellow links) */
+html.zytek-a11y-contrast-dark body,
+html.zytek-a11y-contrast-dark body *:not(svg):not(svg *):not(img):not(video):not(picture):not(canvas):not(iframe) {
+	background-color: #000 !important;
+	background-image: none !important;
+	color: #fff !important;
+	border-color: #fff !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+html.zytek-a11y-contrast-dark body a,
+html.zytek-a11y-contrast-dark body a * {
+	color: #ffeb3b !important;
+	text-decoration: underline !important;
+}
+html.zytek-a11y-contrast-dark body button,
+html.zytek-a11y-contrast-dark body input,
+html.zytek-a11y-contrast-dark body select,
+html.zytek-a11y-contrast-dark body textarea {
+	border: 2px solid #fff !important;
+}
+html.zytek-a11y-contrast-dark .zytek-a11y__tile[aria-pressed="true"],
+html.zytek-a11y-contrast-dark .zytek-a11y__tile[aria-expanded="true"],
+html.zytek-a11y-contrast-dark .zytek-a11y__player-button[aria-pressed="true"] {
+	outline: 3px solid #ffeb3b !important;
+}
+
+/* Contrast: light (black on white, blue links) */
+html.zytek-a11y-contrast-light body,
+html.zytek-a11y-contrast-light body *:not(svg):not(svg *):not(img):not(video):not(picture):not(canvas):not(iframe) {
+	background-color: #fff !important;
+	background-image: none !important;
+	color: #000 !important;
+	border-color: #000 !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+html.zytek-a11y-contrast-light body a,
+html.zytek-a11y-contrast-light body a * {
+	color: #0000c8 !important;
+	text-decoration: underline !important;
+}
+html.zytek-a11y-contrast-light body button,
+html.zytek-a11y-contrast-light body input,
+html.zytek-a11y-contrast-light body select,
+html.zytek-a11y-contrast-light body textarea {
+	border: 2px solid #000 !important;
+}
+html.zytek-a11y-contrast-light .zytek-a11y__tile[aria-pressed="true"],
+html.zytek-a11y-contrast-light .zytek-a11y__tile[aria-expanded="true"],
+html.zytek-a11y-contrast-light .zytek-a11y__player-button[aria-pressed="true"] {
+	outline: 3px solid #0000c8 !important;
+}
+
+/* Colour filters. They combine (e.g. less brightness + grayscale) and apply to
+   the page, never to the panel. Inverting turns pictures back so they look right. */
+html.zytek-a11y-invertColors { --zytek-a11y-f-invert: invert(1) hue-rotate(180deg); }
+html.zytek-a11y-brightness-low { --zytek-a11y-f-brightness: brightness(0.8); }
+html.zytek-a11y-brightness-high { --zytek-a11y-f-brightness: brightness(1.2); }
+html.zytek-a11y-saturation-low { --zytek-a11y-f-saturation: saturate(0.5); }
+html.zytek-a11y-saturation-high { --zytek-a11y-f-saturation: saturate(2); }
+html.zytek-a11y-grayscale { --zytek-a11y-f-grayscale: grayscale(1); }
+html:is(.zytek-a11y-invertColors, .zytek-a11y-brightness, .zytek-a11y-saturation, .zytek-a11y-grayscale) body > *:not(#zytekA11y) {
+	filter: var(--zytek-a11y-f-invert,) var(--zytek-a11y-f-brightness,) var(--zytek-a11y-f-saturation,) var(--zytek-a11y-f-grayscale,) !important;
+}
+html.zytek-a11y-invertColors body > *:not(#zytekA11y) :is(img, video, picture, canvas, iframe) {
+	filter: invert(1) hue-rotate(180deg) !important;
+}
+html.zytek-a11y-invertColors body {
+	background-color: #fff;
+}
+
+/* Hide images: pictures and background images disappear, the layout stays.
+   Opacity (not visibility) keeps their text alternative for screen readers
+   and the "Tooltips" tool, so an image link never loses its name. */
+html.zytek-a11y-hideImages body > *:not(#zytekA11y) :is(img, picture, video, canvas, svg image) {
+	opacity: 0 !important;
+}
+html.zytek-a11y-hideImages body > *:not(#zytekA11y),
+html.zytek-a11y-hideImages body > *:not(#zytekA11y) * {
+	background-image: none !important;
+}
+
+/* Read aloud: blocks that can be read show it on hover; the one being read is marked */
+html.zytek-a11y-readAloud body > *:not(#zytekA11y) :is(p, li, h1, h2, h3, h4, h5, h6, dd, dt, td, th, figcaption, blockquote):hover {
+	outline: 2px dashed #6b7280;
+	outline-offset: 2px;
+	cursor: pointer;
+}
+.zytek-a11y-reading {
+	outline: 3px solid #ffbf00 !important;
+	outline-offset: 2px !important;
+	background-color: #fff6cc !important;
+	color: #000 !important;
+}
+
+/* Statement page */
+.zytek-a11y-statement {
+	max-width: 75ch;
+}
+.zytek-a11y-statement__date {
+	color: #555;
+	font-size: 0.9375em;
+}
+.zytek-a11y-footer-link {
+	margin: 0.5rem 0 0;
+}

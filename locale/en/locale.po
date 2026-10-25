@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.generic.zytekAccessibility.displayName"
+msgstr "Zytek - Accessibility"
+
+msgid "plugins.generic.zytekAccessibility.description"
+msgstr "Accessibility panel for readers (text size and spacing, contrast and colour filters, readable font, read aloud, reading guide and mode, page map, animation control…) and an accessibility statement with a channel to report barriers. No third-party services."
+
+msgid "plugins.generic.zytekAccessibility.title"
+msgstr "Accessibility options"
+
+msgid "plugins.generic.zytekAccessibility.open"
+msgstr "Open accessibility tools"
+
+msgid "plugins.generic.zytekAccessibility.close"
+msgstr "Close accessibility tools"
+
+msgid "plugins.generic.zytekAccessibility.shortcut"
+msgstr "Shortcut: Alt + Shift + A. Your preferences are saved in this browser only."
+
+msgid "plugins.generic.zytekAccessibility.feature.textSize.label"
+msgstr "Bigger text"
+
+msgid "plugins.generic.zytekAccessibility.feature.textSize.description"
+msgstr "Enlarges text in four steps, up to 200%, without breaking the page."
+
+msgid "plugins.generic.zytekAccessibility.feature.contrast.label"
+msgstr "Contrast"
+
+msgid "plugins.generic.zytekAccessibility.feature.contrast.description"
+msgstr "Dark or light high contrast."
+
+msgid "plugins.generic.zytekAccessibility.feature.textSpacing.label"
+msgstr "Text spacing"
+
+msgid "plugins.generic.zytekAccessibility.feature.textSpacing.description"
+msgstr "More space between lines, letters, words and paragraphs."
+
+msgid "plugins.generic.zytekAccessibility.feature.readableFont.label"
+msgstr "Readable font"
+
+msgid "plugins.generic.zytekAccessibility.feature.readableFont.description"
+msgstr "A typeface designed for low vision and dyslexia (Atkinson Hyperlegible)."
+
+msgid "plugins.generic.zytekAccessibility.feature.highlightLinks.label"
+msgstr "Highlight links"
+
+msgid "plugins.generic.zytekAccessibility.feature.highlightLinks.description"
+msgstr "Underlines and marks every link so it can be found without relying on colour."
+
+msgid "plugins.generic.zytekAccessibility.feature.bigCursor.label"
+msgstr "Big cursor"
+
+msgid "plugins.generic.zytekAccessibility.feature.bigCursor.description"
+msgstr "A larger, more visible mouse pointer."
+
+msgid "plugins.generic.zytekAccessibility.feature.readAloud.label"
+msgstr "Read aloud"
+
+msgid "plugins.generic.zytekAccessibility.feature.readAloud.description"
+msgstr "Reads the paragraph you click, the selected text or the whole page with your device’s voice. Each press changes the speed."
+
+msgid "plugins.generic.zytekAccessibility.feature.readingGuide.label"
+msgstr "Reading guide"
+
+msgid "plugins.generic.zytekAccessibility.feature.readingGuide.description"
+msgstr "A band that follows the pointer and dims the rest so you keep your place."
+
+msgid "plugins.generic.zytekAccessibility.feature.readingMode.label"
+msgstr "Reading mode"
+
+msgid "plugins.generic.zytekAccessibility.feature.readingMode.description"
+msgstr "A single centred column without sidebars or decorative elements."
+
+msgid "plugins.generic.zytekAccessibility.feature.pageStructure.label"
+msgstr "Page map"
+
+msgid "plugins.generic.zytekAccessibility.feature.pageStructure.description"
+msgstr "A list of regions and headings to jump straight to each section."
+
+msgid "plugins.generic.zytekAccessibility.feature.focusHighlight.label"
+msgstr "Stronger focus"
+
+msgid "plugins.generic.zytekAccessibility.feature.focusHighlight.description"
+msgstr "A very visible marker on the active element when using a keyboard or assistive devices."
+
+msgid "plugins.generic.zytekAccessibility.feature.stopAnimations.label"
+msgstr "Stop animations"
+
+msgid "plugins.generic.zytekAccessibility.feature.stopAnimations.description"
+msgstr "Stops videos, animations and transitions (motion sensitivity, photosensitive epilepsy, focus)."
+
+msgid "plugins.generic.zytekAccessibility.textSize.value"
+msgstr "{$percent}%"
+
+msgid "plugins.generic.zytekAccessibility.contrast.dark"
+msgstr "Dark"
+
+msgid "plugins.generic.zytekAccessibility.contrast.light"
+msgstr "Light"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.pause"
+msgstr "Pause"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.resume"
+msgstr "Resume"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.stop"
+msgstr "Stop"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.slow"
+msgstr "Slow speed"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.normal"
+msgstr "Normal speed"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.fast"
+msgstr "Fast speed"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.unsupported"
+msgstr "Your browser does not offer read aloud. You can use your system’s screen reader."
+
+msgid "plugins.generic.zytekAccessibility.pageStructure.empty"
+msgstr "No regions or headings were found on this page."
+
+msgid "plugins.generic.zytekAccessibility.pageStructure.landmarks"
+msgstr "Regions"
+
+msgid "plugins.generic.zytekAccessibility.pageStructure.headings"
+msgstr "Headings"
+
+msgid "plugins.generic.zytekAccessibility.landmark.banner"
+msgstr "Header"
+
+msgid "plugins.generic.zytekAccessibility.landmark.navigation"
+msgstr "Navigation"
+
+msgid "plugins.generic.zytekAccessibility.landmark.main"
+msgstr "Main content"
+
+msgid "plugins.generic.zytekAccessibility.landmark.complementary"
+msgstr "Complementary information"
+
+msgid "plugins.generic.zytekAccessibility.landmark.contentinfo"
+msgstr "Footer"
+
+msgid "plugins.generic.zytekAccessibility.landmark.search"
+msgstr "Search"
+
+msgid "plugins.generic.zytekAccessibility.reset"
+msgstr "Reset all"
+
+msgid "plugins.generic.zytekAccessibility.resetDone"
+msgstr "All accessibility preferences were reset."
+
+msgid "plugins.generic.zytekAccessibility.statement.title"
+msgstr "Accessibility statement"
+
+msgid "plugins.generic.zytekAccessibility.statement.default"
+msgstr "<p>{$contextName} is committed to making its website accessible to everyone, including people with disabilities, following the Web Content Accessibility Guidelines (WCAG) 2.1, level AA.</p><p>The site can be used with a keyboard, with screen readers and with browser zoom. Image text alternatives, heading structure and colour contrast are reviewed periodically.</p><h2>Known limitations</h2><p>Some older PDF documents may not be tagged for screen readers and some videos may not have captions. If you need a document in another format or a video transcript, write to us and we will send it.</p>"
+
+msgid "plugins.generic.zytekAccessibility.statement.tools"
+msgstr "Accessibility tools on this site"
+
+msgid "plugins.generic.zytekAccessibility.statement.toolsIntro"
+msgstr "Use the accessibility button in the bottom corner of the screen or the Alt + Shift + A shortcut to adapt the site. Tools with several steps change with each press:"
+
+msgid "plugins.generic.zytekAccessibility.statement.privacy"
+msgstr "Your preferences are saved in your browser only; we use no cookies or third-party services for these tools."
+
+msgid "plugins.generic.zytekAccessibility.statement.feedback"
+msgstr "Found a barrier?"
+
+msgid "plugins.generic.zytekAccessibility.statement.feedbackText"
+msgstr "If any content is not accessible to you, or you need a document in another format, write to us with the page and the problem. We will reply as soon as possible."
+
+msgid "plugins.generic.zytekAccessibility.statement.mailSubject"
+msgstr "Accessibility barrier"
+
+msgid "plugins.generic.zytekAccessibility.statement.reviewed"
+msgstr "Last reviewed: {$date}"
+
+msgid "plugins.generic.zytekAccessibility.settings.intro"
+msgstr "Choose the tools offered to readers. None uses third-party services and preferences are saved only in the reader’s browser."
+
+msgid "plugins.generic.zytekAccessibility.settings.button"
+msgstr "Accessibility button"
+
+msgid "plugins.generic.zytekAccessibility.settings.position"
+msgstr "Position"
+
+msgid "plugins.generic.zytekAccessibility.settings.position.bottomRight"
+msgstr "Bottom right"
+
+msgid "plugins.generic.zytekAccessibility.settings.position.bottomLeft"
+msgstr "Bottom left"
+
+msgid "plugins.generic.zytekAccessibility.settings.buttonColour"
+msgstr "Button and panel colour"
+
+msgid "plugins.generic.zytekAccessibility.settings.buttonColour.description"
+msgstr "Six-digit hex colour, for example #0B4F9C. It must be dark: the text and icon are white (minimum contrast 4.5:1)."
+
+msgid "plugins.generic.zytekAccessibility.settings.statement"
+msgstr "Accessibility statement"
+
+msgid "plugins.generic.zytekAccessibility.settings.showStatement"
+msgstr "Publish the accessibility statement page"
+
+msgid "plugins.generic.zytekAccessibility.settings.footerLink"
+msgstr "Add a link to the statement in the footer"
+
+msgid "plugins.generic.zytekAccessibility.settings.statementPath"
+msgstr "Page address"
+
+msgid "plugins.generic.zytekAccessibility.settings.statementPath.description"
+msgstr "Lowercase letters, numbers and hyphens only. Default “accesibilidad”: …/index.php/journal/accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.settings.contactEmail"
+msgstr "Email for reporting barriers"
+
+msgid "plugins.generic.zytekAccessibility.settings.contactEmail.description"
+msgstr "If empty, the journal contact email is used."
+
+msgid "plugins.generic.zytekAccessibility.settings.reviewDate"
+msgstr "Last review date"
+
+msgid "plugins.generic.zytekAccessibility.settings.reviewDate.description"
+msgstr "Free text, for example “October 2026”."
+
+msgid "plugins.generic.zytekAccessibility.settings.statementText"
+msgstr "Statement text"
+
+msgid "plugins.generic.zytekAccessibility.settings.statementText.description"
+msgstr "Optional. If empty, a base text is shown. The available tools and the contact channel are always added automatically."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.colour"
+msgstr "Use a six-digit hex colour dark enough for white text to reach 4.5:1 contrast, for example #0B4F9C."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.position"
+msgstr "Choose a valid position."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.path"
+msgstr "Use only lowercase letters, numbers and hyphens (2 to 41 characters)."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.email"
+msgstr "Enter a valid email address."
+
+msgid "plugins.generic.zytekAccessibility.group.content"
+msgstr "Content"
+
+msgid "plugins.generic.zytekAccessibility.group.colors"
+msgstr "Colours"
+
+msgid "plugins.generic.zytekAccessibility.group.navigation"
+msgstr "Navigation"
+
+msgid "plugins.generic.zytekAccessibility.feature.tooltips.label"
+msgstr "Tooltips"
+
+msgid "plugins.generic.zytekAccessibility.feature.tooltips.description"
+msgstr "Shows the alternative text of images, icons and buttons in large type on hover or focus."
+
+msgid "plugins.generic.zytekAccessibility.feature.hideImages.label"
+msgstr "Hide images"
+
+msgid "plugins.generic.zytekAccessibility.feature.hideImages.description"
+msgstr "Removes images and backgrounds to read without distractions."
+
+msgid "plugins.generic.zytekAccessibility.feature.invertColors.label"
+msgstr "Invert colours"
+
+msgid "plugins.generic.zytekAccessibility.feature.invertColors.description"
+msgstr "Dark background and light text, keeping photos as they are."
+
+msgid "plugins.generic.zytekAccessibility.feature.brightness.label"
+msgstr "Brightness"
+
+msgid "plugins.generic.zytekAccessibility.feature.brightness.description"
+msgstr "Less or more page brightness."
+
+msgid "plugins.generic.zytekAccessibility.feature.grayscale.label"
+msgstr "Grayscale"
+
+msgid "plugins.generic.zytekAccessibility.feature.grayscale.description"
+msgstr "Removes colour, so nothing depends on it and there are fewer distractions."
+
+msgid "plugins.generic.zytekAccessibility.feature.saturation.label"
+msgstr "Saturation"
+
+msgid "plugins.generic.zytekAccessibility.feature.saturation.description"
+msgstr "Softer or stronger colours."
+
+msgid "plugins.generic.zytekAccessibility.brightness.low"
+msgstr "Less brightness"
+
+msgid "plugins.generic.zytekAccessibility.brightness.high"
+msgstr "More brightness"
+
+msgid "plugins.generic.zytekAccessibility.saturation.low"
+msgstr "Low"
+
+msgid "plugins.generic.zytekAccessibility.saturation.high"
+msgstr "High"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.hint"
+msgstr "Click a paragraph or select text to hear it. Esc stops reading."
+
+msgid "plugins.generic.zytekAccessibility.readAloud.readPage"
+msgstr "Read the page"
+
+msgid "plugins.generic.zytekAccessibility.state.on"
+msgstr "on"
+
+msgid "plugins.generic.zytekAccessibility.state.off"
+msgstr "off"
+
+msgid "plugins.generic.zytekAccessibility.language"
+msgstr "Language: {$language}. Change language"
+
+msgid "plugins.generic.zytekAccessibility.hide"
+msgstr "Hide the accessibility button"
+
+msgid "plugins.generic.zytekAccessibility.hide.done"
+msgstr "Accessibility button hidden for this visit. Press Alt + Shift + A to show it."
+
+msgid "plugins.generic.zytekAccessibility.report"
+msgstr "Report a problem"
+
+msgid "plugins.generic.zytekAccessibility.report.subject"
+msgstr "Accessibility problem"
+
+msgid "plugins.generic.zytekAccessibility.report.body"
+msgstr "Page: {$url} — Describe the problem: "
+
+msgid "plugins.generic.zytekAccessibility.settings.showBrand"
+msgstr "Show the Zytek brand at the foot of the panel"

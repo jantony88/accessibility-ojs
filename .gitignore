@@ -1,0 +1,8 @@
+# Paquetes generados (se publican en Releases)
+*.tar.gz
+*.tar.gz.sha256
+*.zip
+
+# Sistema
+.DS_Store
+Thumbs.db

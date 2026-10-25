@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.generic.zytekAccessibility.displayName"
+msgstr "Zytek - Accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.description"
+msgstr "Panel de accesibilidad para lectores (tamaño y espaciado del texto, contraste y filtros de color, fuente legible, lectura en voz alta, guía y modo de lectura, mapa de la página, control de animaciones…) y declaración de accesibilidad con canal para reportar barreras. Sin servicios de terceros."
+
+msgid "plugins.generic.zytekAccessibility.title"
+msgstr "Opciones de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.open"
+msgstr "Abrir herramientas de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.close"
+msgstr "Cerrar herramientas de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.shortcut"
+msgstr "Atajo: Alt + Mayús + A. Sus preferencias se guardan solo en este navegador."
+
+msgid "plugins.generic.zytekAccessibility.feature.textSize.label"
+msgstr "Texto más grande"
+
+msgid "plugins.generic.zytekAccessibility.feature.textSize.description"
+msgstr "Agranda el texto en cuatro pasos, hasta el 200 %, sin desbordar la página."
+
+msgid "plugins.generic.zytekAccessibility.feature.contrast.label"
+msgstr "Contraste"
+
+msgid "plugins.generic.zytekAccessibility.feature.contrast.description"
+msgstr "Alto contraste oscuro o claro."
+
+msgid "plugins.generic.zytekAccessibility.feature.textSpacing.label"
+msgstr "Espaciado de texto"
+
+msgid "plugins.generic.zytekAccessibility.feature.textSpacing.description"
+msgstr "Más espacio entre líneas, letras, palabras y párrafos."
+
+msgid "plugins.generic.zytekAccessibility.feature.readableFont.label"
+msgstr "Fuente legible"
+
+msgid "plugins.generic.zytekAccessibility.feature.readableFont.description"
+msgstr "Letra diseñada para baja visión y dislexia (Atkinson Hyperlegible)."
+
+msgid "plugins.generic.zytekAccessibility.feature.highlightLinks.label"
+msgstr "Resaltar enlaces"
+
+msgid "plugins.generic.zytekAccessibility.feature.highlightLinks.description"
+msgstr "Subraya y marca todos los enlaces para encontrarlos sin depender del color."
+
+msgid "plugins.generic.zytekAccessibility.feature.bigCursor.label"
+msgstr "Cursor grande"
+
+msgid "plugins.generic.zytekAccessibility.feature.bigCursor.description"
+msgstr "Puntero del ratón más grande y visible."
+
+msgid "plugins.generic.zytekAccessibility.feature.readAloud.label"
+msgstr "Lectura en voz alta"
+
+msgid "plugins.generic.zytekAccessibility.feature.readAloud.description"
+msgstr "Lee el párrafo en el que hace clic, el texto seleccionado o la página entera, con la voz del dispositivo. Cada pulsación cambia la velocidad."
+
+msgid "plugins.generic.zytekAccessibility.feature.readingGuide.label"
+msgstr "Guía de lectura"
+
+msgid "plugins.generic.zytekAccessibility.feature.readingGuide.description"
+msgstr "Una franja que sigue al puntero y atenúa el resto para no perder la línea."
+
+msgid "plugins.generic.zytekAccessibility.feature.readingMode.label"
+msgstr "Modo lectura"
+
+msgid "plugins.generic.zytekAccessibility.feature.readingMode.description"
+msgstr "Una sola columna centrada, sin barras laterales ni elementos decorativos."
+
+msgid "plugins.generic.zytekAccessibility.feature.pageStructure.label"
+msgstr "Mapa de la página"
+
+msgid "plugins.generic.zytekAccessibility.feature.pageStructure.description"
+msgstr "Lista de regiones y títulos para saltar directamente a cada sección."
+
+msgid "plugins.generic.zytekAccessibility.feature.focusHighlight.label"
+msgstr "Foco reforzado"
+
+msgid "plugins.generic.zytekAccessibility.feature.focusHighlight.description"
+msgstr "Marca muy visible del elemento activo al navegar con teclado o dispositivos de apoyo."
+
+msgid "plugins.generic.zytekAccessibility.feature.stopAnimations.label"
+msgstr "Detener animaciones"
+
+msgid "plugins.generic.zytekAccessibility.feature.stopAnimations.description"
+msgstr "Detiene videos, animaciones y transiciones (movimiento, epilepsia fotosensible, concentración)."
+
+msgid "plugins.generic.zytekAccessibility.textSize.value"
+msgstr "{$percent} %"
+
+msgid "plugins.generic.zytekAccessibility.contrast.dark"
+msgstr "Oscuro"
+
+msgid "plugins.generic.zytekAccessibility.contrast.light"
+msgstr "Claro"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.pause"
+msgstr "Pausar"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.resume"
+msgstr "Continuar"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.stop"
+msgstr "Detener"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.slow"
+msgstr "Velocidad lenta"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.normal"
+msgstr "Velocidad normal"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.fast"
+msgstr "Velocidad rápida"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.unsupported"
+msgstr "Su navegador no ofrece lectura en voz alta. Puede usar el lector de pantalla de su sistema."
+
+msgid "plugins.generic.zytekAccessibility.pageStructure.empty"
+msgstr "No se encontraron regiones ni títulos en esta página."
+
+msgid "plugins.generic.zytekAccessibility.pageStructure.landmarks"
+msgstr "Regiones"
+
+msgid "plugins.generic.zytekAccessibility.pageStructure.headings"
+msgstr "Títulos"
+
+msgid "plugins.generic.zytekAccessibility.landmark.banner"
+msgstr "Cabecera"
+
+msgid "plugins.generic.zytekAccessibility.landmark.navigation"
+msgstr "Navegación"
+
+msgid "plugins.generic.zytekAccessibility.landmark.main"
+msgstr "Contenido principal"
+
+msgid "plugins.generic.zytekAccessibility.landmark.complementary"
+msgstr "Información complementaria"
+
+msgid "plugins.generic.zytekAccessibility.landmark.contentinfo"
+msgstr "Pie de página"
+
+msgid "plugins.generic.zytekAccessibility.landmark.search"
+msgstr "Búsqueda"
+
+msgid "plugins.generic.zytekAccessibility.reset"
+msgstr "Restablecer todo"
+
+msgid "plugins.generic.zytekAccessibility.resetDone"
+msgstr "Se restablecieron todas las preferencias de accesibilidad."
+
+msgid "plugins.generic.zytekAccessibility.statement.title"
+msgstr "Declaración de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.statement.default"
+msgstr "<p>{$contextName} se compromete a que su sitio web sea accesible para todas las personas, incluidas las personas con discapacidad, conforme a las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, nivel AA, y a la norma técnica ecuatoriana NTE INEN-ISO/IEC 40500.</p><p>El sitio se puede usar con teclado, con lectores de pantalla y con la ampliación del navegador. Los textos alternativos de las imágenes, la estructura de títulos y el contraste de colores se revisan de forma periódica.</p><h2>Limitaciones conocidas</h2><p>Algunos documentos PDF antiguos pueden no estar etiquetados para lectores de pantalla y algunos videos pueden no tener subtítulos. Si necesita un documento en otro formato o la transcripción de un video, escríbanos y se lo enviaremos.</p>"
+
+msgid "plugins.generic.zytekAccessibility.statement.tools"
+msgstr "Herramientas de accesibilidad de este sitio"
+
+msgid "plugins.generic.zytekAccessibility.statement.toolsIntro"
+msgstr "Use el botón de accesibilidad de la esquina inferior de la pantalla o el atajo Alt + Mayús + A para adaptar el sitio. Las herramientas con varios pasos cambian con cada pulsación:"
+
+msgid "plugins.generic.zytekAccessibility.statement.privacy"
+msgstr "Sus preferencias se guardan solo en su navegador; no usamos cookies ni servicios de terceros para estas herramientas."
+
+msgid "plugins.generic.zytekAccessibility.statement.feedback"
+msgstr "¿Encontró una barrera?"
+
+msgid "plugins.generic.zytekAccessibility.statement.feedbackText"
+msgstr "Si algún contenido no le resulta accesible, o necesita un documento en otro formato, escríbanos indicando la página y el problema. Le responderemos lo antes posible."
+
+msgid "plugins.generic.zytekAccessibility.statement.mailSubject"
+msgstr "Barrera de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.statement.reviewed"
+msgstr "Última revisión: {$date}"
+
+msgid "plugins.generic.zytekAccessibility.settings.intro"
+msgstr "Elija las herramientas que se ofrecerán a los lectores. Todas funcionan sin servicios de terceros y guardan las preferencias solo en el navegador del lector."
+
+msgid "plugins.generic.zytekAccessibility.settings.button"
+msgstr "Botón de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.settings.position"
+msgstr "Posición"
+
+msgid "plugins.generic.zytekAccessibility.settings.position.bottomRight"
+msgstr "Abajo a la derecha"
+
+msgid "plugins.generic.zytekAccessibility.settings.position.bottomLeft"
+msgstr "Abajo a la izquierda"
+
+msgid "plugins.generic.zytekAccessibility.settings.buttonColour"
+msgstr "Color del botón y del panel"
+
+msgid "plugins.generic.zytekAccessibility.settings.buttonColour.description"
+msgstr "Color hexadecimal de seis dígitos, por ejemplo #0B4F9C. Debe ser oscuro: el texto y el icono son blancos (contraste mínimo 4,5:1)."
+
+msgid "plugins.generic.zytekAccessibility.settings.statement"
+msgstr "Declaración de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.settings.showStatement"
+msgstr "Publicar la página de declaración de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.settings.footerLink"
+msgstr "Añadir un enlace a la declaración en el pie de página"
+
+msgid "plugins.generic.zytekAccessibility.settings.statementPath"
+msgstr "Dirección de la página"
+
+msgid "plugins.generic.zytekAccessibility.settings.statementPath.description"
+msgstr "Solo minúsculas, números y guiones. Por defecto «accesibilidad»: …/index.php/revista/accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.settings.contactEmail"
+msgstr "Correo para reportar barreras"
+
+msgid "plugins.generic.zytekAccessibility.settings.contactEmail.description"
+msgstr "Si se deja vacío se usa el correo de contacto de la revista."
+
+msgid "plugins.generic.zytekAccessibility.settings.reviewDate"
+msgstr "Fecha de la última revisión"
+
+msgid "plugins.generic.zytekAccessibility.settings.reviewDate.description"
+msgstr "Texto libre, por ejemplo «octubre de 2026»."
+
+msgid "plugins.generic.zytekAccessibility.settings.statementText"
+msgstr "Texto de la declaración"
+
+msgid "plugins.generic.zytekAccessibility.settings.statementText.description"
+msgstr "Opcional. Si se deja vacío se muestra un texto base. Las herramientas disponibles y el canal de contacto se añaden siempre de forma automática."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.colour"
+msgstr "Use un color hexadecimal de seis dígitos lo bastante oscuro para que el texto blanco tenga contraste 4,5:1, por ejemplo #0B4F9C."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.position"
+msgstr "Elija una posición válida."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.path"
+msgstr "Use solo minúsculas, números y guiones (2 a 41 caracteres)."
+
+msgid "plugins.generic.zytekAccessibility.settings.error.email"
+msgstr "Escriba un correo electrónico válido."
+
+msgid "plugins.generic.zytekAccessibility.group.content"
+msgstr "Contenido"
+
+msgid "plugins.generic.zytekAccessibility.group.colors"
+msgstr "Colores"
+
+msgid "plugins.generic.zytekAccessibility.group.navigation"
+msgstr "Navegación"
+
+msgid "plugins.generic.zytekAccessibility.feature.tooltips.label"
+msgstr "Información emergente"
+
+msgid "plugins.generic.zytekAccessibility.feature.tooltips.description"
+msgstr "Muestra en grande el texto alternativo de imágenes, iconos y botones al pasar el puntero o el foco."
+
+msgid "plugins.generic.zytekAccessibility.feature.hideImages.label"
+msgstr "Ocultar imágenes"
+
+msgid "plugins.generic.zytekAccessibility.feature.hideImages.description"
+msgstr "Quita imágenes y fondos para leer sin distracciones."
+
+msgid "plugins.generic.zytekAccessibility.feature.invertColors.label"
+msgstr "Invertir colores"
+
+msgid "plugins.generic.zytekAccessibility.feature.invertColors.description"
+msgstr "Fondo oscuro y texto claro, conservando las fotos."
+
+msgid "plugins.generic.zytekAccessibility.feature.brightness.label"
+msgstr "Brillo"
+
+msgid "plugins.generic.zytekAccessibility.feature.brightness.description"
+msgstr "Menos o más brillo de la página."
+
+msgid "plugins.generic.zytekAccessibility.feature.grayscale.label"
+msgstr "Escala de grises"
+
+msgid "plugins.generic.zytekAccessibility.feature.grayscale.description"
+msgstr "Quita los colores, para no depender de ellos o reducir distracciones."
+
+msgid "plugins.generic.zytekAccessibility.feature.saturation.label"
+msgstr "Saturación"
+
+msgid "plugins.generic.zytekAccessibility.feature.saturation.description"
+msgstr "Colores más suaves o más intensos."
+
+msgid "plugins.generic.zytekAccessibility.brightness.low"
+msgstr "Menos brillo"
+
+msgid "plugins.generic.zytekAccessibility.brightness.high"
+msgstr "Más brillo"
+
+msgid "plugins.generic.zytekAccessibility.saturation.low"
+msgstr "Baja"
+
+msgid "plugins.generic.zytekAccessibility.saturation.high"
+msgstr "Alta"
+
+msgid "plugins.generic.zytekAccessibility.readAloud.hint"
+msgstr "Haga clic en un párrafo o seleccione texto para escucharlo. Esc detiene la lectura."
+
+msgid "plugins.generic.zytekAccessibility.readAloud.readPage"
+msgstr "Leer la página"
+
+msgid "plugins.generic.zytekAccessibility.state.on"
+msgstr "activado"
+
+msgid "plugins.generic.zytekAccessibility.state.off"
+msgstr "desactivado"
+
+msgid "plugins.generic.zytekAccessibility.language"
+msgstr "Idioma: {$language}. Cambiar idioma"
+
+msgid "plugins.generic.zytekAccessibility.hide"
+msgstr "Ocultar el botón de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.hide.done"
+msgstr "Botón de accesibilidad oculto durante esta visita. Pulse Alt + Mayús + A para mostrarlo."
+
+msgid "plugins.generic.zytekAccessibility.report"
+msgstr "Reportar un problema"
+
+msgid "plugins.generic.zytekAccessibility.report.subject"
+msgstr "Problema de accesibilidad"
+
+msgid "plugins.generic.zytekAccessibility.report.body"
+msgstr "Página: {$url} — Describa el problema: "
+
+msgid "plugins.generic.zytekAccessibility.settings.showBrand"
+msgstr "Mostrar la marca Zytek en el pie del panel"
